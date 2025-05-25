@@ -1,0 +1,67 @@
+/* client/src/components/services/CategoryCard.css */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.category-icon .icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.category-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+.category-description {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .category-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .category-icon .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .category-name {
+    font-size: 1.1rem;
+  }
+}

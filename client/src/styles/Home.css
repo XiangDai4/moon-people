@@ -1,0 +1,250 @@
+/* client/src/styles/Home.css */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+/* General styles */
+.home-container {
+  font-family: 'Open Sans', sans-serif;
+  color: #2D2D2D;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #5A2A8C;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Hero section */
+.hero-section {
+  background-color: #FFF8ED;
+  padding: 4rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #5A2A8C;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #2D2D2D;
+  padding-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background-color: #5A2A8C;
+  color: white;
+  box-shadow: 0 4px 10px rgba(90, 42, 140, 0.2);
+}
+
+.cta-button.primary:hover {
+  background-color: #8A5CBA;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(90, 42, 140, 0.25);
+}
+
+.cta-button.secondary {
+  background-color: #F27D72;
+  color: white;
+  box-shadow: 0 4px 10px rgba(242, 125, 114, 0.2);
+}
+
+.cta-button.secondary:hover {
+  background-color: #F59A91;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(242, 125, 114, 0.25);
+}
+
+.cta-button.outline {
+  background-color: transparent;
+  color: #5A2A8C;
+  border: 2px solid #5A2A8C;
+}
+
+.cta-button.outline:hover {
+  background-color: rgba(90, 42, 140, 0.05);
+  transform: translateY(-3px);
+}
+
+/* Mission section */
+.mission-section {
+  padding: 5rem 1rem;
+  background-color: white;
+}
+
+.mission-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Features section */
+.features-section {
+  padding: 5rem 1rem;
+  background-color: #F5F5F7;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  color: #5A2A8C;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #5A2A8C;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Testimonials section */
+.testimonials-section {
+  padding: 5rem 1rem;
+  background-color: #E2D9F3;
+}
+
+.testimonial-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #5A2A8C;
+}
+
+/* Join section */
+.join-section {
+  padding: 5rem 1rem;
+  background-color: #FFF8ED;
+  text-align: center;
+}
+
+.join-text {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-buttons {
+    /* Keep buttons side by side instead of stacking */
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .cta-button {
+    /* Instead of full width, set a reasonable max-width */
+    width: auto;
+    min-width: 150px; /* Optional: ensures buttons aren't too narrow */
+    max-width: 250px; /* Optional: ensures buttons aren't too wide */
+  }
+}

@@ -1,0 +1,335 @@
+/* client/src/styles/admin/Categories.css */
+/* Following the color palette and design guidelines from the project plan */
+
+.admin-categories-container {
+  font-family: 'Open Sans', sans-serif;
+  color: #2D2D2D;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Admin Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E2D9F3;
+}
+
+.admin-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #5A2A8C;
+  margin: 0;
+}
+
+.back-to-admin {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #E2D9F3;
+  color: #5A2A8C;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-admin:hover {
+  background-color: #9B7ED9;
+  color: #FFF8ED;
+}
+
+/* Admin Content Layout */
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form Panel */
+.category-form-panel {
+  background-color: #FFF8ED;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #5A2A8C;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #E2D9F3;
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.save-button {
+  padding: 12px 24px;
+  background-color: #5A2A8C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: #8A5CBA;
+}
+
+.cancel-button {
+  padding: 12px 24px;
+  background-color: #F5F5F7;
+  color: #2D2D2D;
+  border: 1px solid #AAAABC;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #E2D9F3;
+}
+
+/* Category List Panel */
+.category-list-panel {
+  background-color: #FFF8ED;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #5A2A8C;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.loading-text,
+.error-text,
+.no-categories-text {
+  color: #AAAABC;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.error-text {
+  color: #E53935;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.category-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-item.inactive {
+  opacity: 0.7;
+  background-color: #F5F5F7;
+}
+
+.category-item-content {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.category-icon-preview {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #E2D9F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-icon-preview .icon {
+  width: 24px;
+  height: 24px;
+  color: #5A2A8C;
+}
+
+.category-details {
+  flex: 1;
+}
+
+.category-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+  color: #2D2D2D;
+}
+
+.category-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 0 8px 0;
+}
+
+.category-status {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.status-active {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.status-inactive {
+  color: #AAAABC;
+  font-weight: 600;
+}
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-toggle-button, 
+.edit-button, 
+.delete-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.status-toggle-button.activate {
+  background-color: #E2D9F3;
+  color: #5A2A8C;
+}
+
+.status-toggle-button.deactivate {
+  background-color: #F5F5F7;
+  color: #AAAABC;
+}
+
+.status-toggle-button.activate:hover {
+  background-color: #9B7ED9;
+  color: white;
+}
+
+.status-toggle-button.deactivate:hover {
+  background-color: #AAAABC;
+  color: white;
+}
+
+.edit-button {
+  background-color: #7BAE7F;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #9CCEA0;
+}
+
+.delete-button {
+  background-color: #F27D72;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #F59A91;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .category-item-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .category-actions {
+    justify-content: space-between;
+  }
+  
+  .status-toggle-button, 
+  .edit-button, 
+  .delete-button {
+    flex: 1;
+    text-align: center;
+  }
+}
